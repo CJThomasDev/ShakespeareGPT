@@ -315,7 +315,7 @@ Building ShakespeareGPT provided hands-on experience with:
 
 **CJ Thomas**
 
-Computer Science — Florida State University
+Computer Science - Florida State University
 
 GitHub: [CJThomasDev](https://github.com/CJThomasDev)
 
