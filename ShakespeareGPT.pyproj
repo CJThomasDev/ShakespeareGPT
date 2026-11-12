@@ -45,9 +45,12 @@
     <Folder Include="training\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include=".gitignore" />
     <Content Include="frontend\index.html" />
     <Content Include="frontend\script.js" />
     <Content Include="frontend\style.css" />
+    <Content Include="README.md" />
+    <Content Include="requirements.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
