@@ -1,4 +1,4 @@
-# ShakespeareGPT ??
+# ShakespeareGPT
 
 ### A GPT-Style Transformer Built From Scratch in PyTorch
 
