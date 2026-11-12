@@ -229,7 +229,7 @@ These measurements demonstrate the performance difference between CPU and GPU in
 
 ```text
 ShakespeareGPT/
---- frontend/
+|-- frontend/
 |   |-- index.html
 |   |-- style.css
 |   |-- script.js
