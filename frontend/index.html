@@ -1,0 +1,106 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ShakespeareGPT | AI Play Generator</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="container">
+
+        <!-- Page header -->
+        <header class="header">
+            <div class="badge">CHARACTER-LEVEL TRANSFORMER</div>
+
+            <h1>Shakespeare<span>GPT</span></h1>
+
+            <p>
+                Generate Shakespeare-inspired dialogue using a
+                Transformer neural network trained from scratch.
+            </p>
+        </header>
+
+        <!-- Generation settings -->
+        <section class="generator">
+
+            <h2>Write Your Scene</h2>
+
+            <div class="form-group">
+                <label for="prompt">Starting Character</label>
+
+                <select id="prompt">
+                    <option value="ROMEO:&#10;">Romeo</option>
+                    <option value="HAMLET:&#10;">Hamlet</option>
+                    <option value="MACBETH:&#10;">Macbeth</option>
+                    <option value="KING LEAR:&#10;">King Lear</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="temperature">
+                    Creativity
+                    <span id="temperature-value">0.8</span>
+                </label>
+
+                <input type="range"
+                       id="temperature"
+                       min="0.5"
+                       max="1.5"
+                       step="0.1"
+                       value="0.8">
+
+                <div class="slider-labels">
+                    <span>More Predictable</span>
+                    <span>More Random</span>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="length">Dialogue Length</label>
+
+                <select id="length">
+                    <option value="150">Short - 150 characters</option>
+                    <option value="250" selected>Medium - 250 characters</option>
+                    <option value="500">Long - 500 characters</option>
+                </select>
+            </div>
+
+            <button id="generate-btn" type="button">
+                Generate Dialogue
+            </button>
+
+        </section>
+
+        <!-- Generated dialogue -->
+        <section class="output-section">
+
+            <div class="output-header">
+                <h2>Your Generated Scene</h2>
+                <span class="output-label">AI GENERATED</span>
+            </div>
+
+            <div id="output" class="output">
+                Your Shakespeare-inspired scene will appear here.
+            </div>
+
+        </section>
+
+        <!-- Project information -->
+        <footer>
+            Built with PyTorch, FastAPI, and a custom
+            10.7M-parameter Transformer.
+        </footer>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

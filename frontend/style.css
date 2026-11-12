@@ -1,0 +1,332 @@
+/* Import fonts */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap');
+
+
+/* Global styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --background: #0c0c10;
+    --card: #17171e;
+    --card-hover: #1e1e27;
+    --border: #30303a;
+    --gold: #d4af67;
+    --gold-light: #f0d49a;
+    --text: #f2f0eb;
+    --text-muted: #9b9ba7;
+}
+
+body {
+    background: var(--background);
+    color: var(--text);
+    font-family: 'Inter', sans-serif;
+    min-height: 100vh;
+    line-height: 1.6;
+}
+
+
+/* Main container */
+.container {
+    width: 100%;
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 70px 24px 40px;
+}
+
+
+/* Header */
+.header {
+    text-align: center;
+    margin-bottom: 55px;
+}
+
+.badge {
+    display: inline-block;
+    padding: 8px 16px;
+    margin-bottom: 22px;
+    border: 1px solid rgba(212, 175, 103, 0.35);
+    border-radius: 30px;
+    color: var(--gold);
+    background: rgba(212, 175, 103, 0.06);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+.header h1 {
+    font-family: 'Cinzel', serif;
+    font-size: clamp(40px, 7vw, 64px);
+    font-weight: 600;
+    letter-spacing: -2px;
+    margin-bottom: 16px;
+}
+
+    .header h1 span {
+        color: var(--gold);
+    }
+
+.header p {
+    max-width: 550px;
+    margin: 0 auto;
+    color: var(--text-muted);
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+
+/* Generator card */
+.generator {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 35px;
+    margin-bottom: 28px;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+}
+
+    .generator h2 {
+        font-family: 'Cinzel', serif;
+        font-size: 22px;
+        font-weight: 500;
+        margin-bottom: 30px;
+    }
+
+
+/* Form elements */
+.form-group {
+    margin-bottom: 28px;
+}
+
+    .form-group label {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 12px;
+        font-size: 13px;
+        font-weight: 600;
+        color: var(--text);
+    }
+
+        .form-group label span {
+            color: var(--gold);
+            font-size: 13px;
+        }
+
+select {
+    width: 100%;
+    padding: 14px 16px;
+    background: #101015;
+    color: var(--text);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    cursor: pointer;
+    outline: none;
+    transition: border-color 0.2s ease;
+}
+
+    select:hover {
+        border-color: #555561;
+    }
+
+    select:focus {
+        border-color: var(--gold);
+    }
+
+
+/* Creativity slider */
+input[type="range"] {
+    width: 100%;
+    height: 6px;
+    appearance: none;
+    -webkit-appearance: none;
+    background: #34343e;
+    border-radius: 10px;
+    cursor: pointer;
+    outline: none;
+}
+
+    input[type="range"]::-webkit-slider-thumb {
+        appearance: none;
+        -webkit-appearance: none;
+        width: 18px;
+        height: 18px;
+        background: var(--gold);
+        border: 3px solid var(--card);
+        border-radius: 50%;
+        box-shadow: 0 0 0 1px var(--gold);
+        cursor: pointer;
+        transition: transform 0.2s ease;
+    }
+
+        input[type="range"]::-webkit-slider-thumb:hover {
+            transform: scale(1.15);
+        }
+
+    input[type="range"]::-moz-range-thumb {
+        width: 14px;
+        height: 14px;
+        background: var(--gold);
+        border: 2px solid var(--card);
+        border-radius: 50%;
+        cursor: pointer;
+    }
+
+.slider-labels {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    color: var(--text-muted);
+    font-size: 11px;
+}
+
+
+/* Generate button */
+#generate-btn {
+    width: 100%;
+    padding: 16px 24px;
+    background: var(--gold);
+    color: #101015;
+    border: none;
+    border-radius: 8px;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+    #generate-btn:hover {
+        background: var(--gold-light);
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(212, 175, 103, 0.2);
+    }
+
+    #generate-btn:active {
+        transform: translateY(0);
+    }
+
+    #generate-btn:disabled {
+        opacity: 0.6;
+        cursor: not-allowed;
+        transform: none;
+    }
+
+
+/* Output section */
+.output-section {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 35px;
+    margin-bottom: 40px;
+}
+
+.output-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+    .output-header h2 {
+        font-family: 'Cinzel', serif;
+        font-size: 20px;
+        font-weight: 500;
+    }
+
+.output-label {
+    color: var(--gold);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    white-space: nowrap;
+}
+
+
+/* Generated dialogue display */
+.output {
+    min-height: 180px;
+    padding: 25px;
+    background: #101015;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    color: var(--text-muted);
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 17px;
+    line-height: 1.9;
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+    transition: border-color 0.2s ease;
+}
+
+    .output.has-content {
+        color: var(--text);
+        border-color: rgba(212, 175, 103, 0.35);
+    }
+
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px 0;
+    color: var(--text-muted);
+    font-size: 12px;
+    border-top: 1px solid var(--border);
+}
+
+
+/* Mobile responsiveness */
+@media (max-width: 600px) {
+
+    .container {
+        padding: 45px 16px 25px;
+    }
+
+    .header {
+        margin-bottom: 35px;
+    }
+
+        .header h1 {
+            letter-spacing: -1px;
+        }
+
+        .header p {
+            font-size: 14px;
+        }
+
+    .generator,
+    .output-section {
+        padding: 24px 20px;
+        border-radius: 12px;
+    }
+
+        .generator h2 {
+            font-size: 19px;
+        }
+
+    .output-header h2 {
+        font-size: 17px;
+    }
+
+    .output {
+        padding: 18px;
+        font-size: 15px;
+    }
+
+    .badge {
+        font-size: 9px;
+        letter-spacing: 1.5px;
+    }
+}
+
+
+
+

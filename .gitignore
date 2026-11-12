@@ -1,0 +1,18 @@
+# Python cache
+__pycache__/
+*.pyc
+
+# Virtual environments
+venv/
+.venv/
+
+# Visual Studio files
+.vs/
+*.user
+
+# Training checkpoints we don't need
+gpt_latest.pt
+
+# Local environment files
+.env
+.env.*
