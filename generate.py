@@ -10,6 +10,10 @@ BASE_DIR = Path(__file__).resolve().parent
 # Use GPU if available
 device = "cuda" if torch.cuda.is_available() else "cpu"
 
+# Limit CPU threads to reduce overhead on small servers
+if device == "cpu":
+    torch.set_num_threads(1)
+
 
 # Load the original Shakespeare text
 with open(BASE_DIR / "shakespeare-1.txt", "r", encoding="utf-8") as f:
@@ -37,7 +41,7 @@ model.eval()
 
 
 # Generate Shakespeare-style dialogue
-@torch.no_grad()
+@torch.inference_mode()
 def generate_text(prompt, temperature=1.0, new_chars=250):
 
     # Make sure the generation settings are valid
