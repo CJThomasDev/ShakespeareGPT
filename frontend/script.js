@@ -7,7 +7,7 @@ const generateButton = document.getElementById("generate-btn");
 const output = document.getElementById("output");
 
 // Our local FastAPI endpoint
-const API_URL = "http://127.0.0.1:8000/generate";
+const API_URL = "https://shakespearegpt-4k2v.onrender.com/generate";
 
 
 // Update the creativity value when the slider moves

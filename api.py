@@ -6,10 +6,15 @@ from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI(title="ShakespeareGPT API")
 
-# Allow local frontend to communicate with the API
+# Allow our portfolio website to access the API
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["null"],
+    allow_origins=[
+        "https://cj-thomas.com",
+        "https://www.cj-thomas.com",
+        "http://localhost:5500",
+        "http://127.0.0.1:5500"
+    ],
     allow_credentials=False,
     allow_methods=["GET", "POST"],
     allow_headers=["Content-Type"]
