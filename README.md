@@ -229,23 +229,23 @@ These measurements demonstrate the performance difference between CPU and GPU in
 
 ```text
 ShakespeareGPT/
-??? frontend/
-?   ??? index.html
-?   ??? style.css
-?   ??? script.js
-?
-??? training/
-?   ??? train.py
-?   ??? evaluate.py
-?
-??? model.py
-??? generate.py
-??? api.py
-??? benchmark.py
-??? gpt_best.pt
-??? shakespeare-1.txt
-??? requirements.txt
-??? README.md
+--- frontend/
+|   |-- index.html
+|   |-- style.css
+|   |-- script.js
+|
+|-- training/
+|   |-- train.py
+|   |-- evaluate.py
+|
+|-- model.py
+|-- generate.py
+|-- api.py
+|-- benchmark.py
+|-- gpt_best.pt
+|-- shakespeare-1.txt
+|-- requirements.txt
+|-- README.md
 ```
 
 ### File Descriptions
